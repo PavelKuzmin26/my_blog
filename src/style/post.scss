@@ -1,0 +1,68 @@
+.post {
+    position: relative;
+}
+.post .contentBx {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+    margin-top: 20px;
+}
+.post .contentBx .postColumn {
+    position: relative;
+}
+.post .contentBx .postColumn .postBox {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    margin-top: 20px;
+}
+.post .contentBx .postColumn .postBox.extraHeight {
+    height: 600px;
+}
+.post .contentBx .postColumn .postBox .textBx {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--white);
+    padding: 20px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    flex-direction: column;
+    transition: 0.25s;
+    opacity: 0;
+    visibility: hidden;
+}
+.post .contentBx .postColumn .postBox:hover .textBx {
+    opacity: 0.9;
+    visibility: visible;
+}
+.post .contentBx .postColumn .postBox .textBx h3 {
+    font-weight: 400;
+    font-size: 1em;
+    letter-spacing: 1px;
+    color: var(--black);
+}
+.post .contentBx .postColumn .postBox .textBx .btn {
+    padding: 4px 10px;
+    background: var(--black);
+    color: var(--white);
+    font-weight: 300;
+    font-size: 1em;
+}
+.mgt60 {
+    margin-top: 60px;
+}
+
+@media (max-width: 991px) {
+    .post .contentBx {
+        grid-template-columns: repeat(1,1fr);
+    }
+    .post .contentBx .postColumn .postBox, 
+    .post .contentBx .postColumn .postBox.postBox.extraHeight {
+        height: 300px;
+    }
+}
